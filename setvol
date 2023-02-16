@@ -7,10 +7,10 @@ DIV=3
 CurrVol="$(pactl get-sink-volume @DEFAULT_SINK@ | rg ...% -o | tail -n1 | tr -d %)"
 
 # Location of Icon Files
-ICON_0=~/.config/i3/scripts/volume_icon_0.png
-ICON_1=~/.config/i3/scripts/volume_icon_1.png
-ICON_2=~/.config/i3/scripts/volume_icon_2.png
-ICON_3=~/.config/i3/scripts/volume_icon_3.png
+ICON_0=volume_icon_0.png
+ICON_1=volume_icon_1.png
+ICON_2=volume_icon_2.png
+ICON_3=volume_icon_3.png
 
 # Mute Volume
 [[ "${1^^}" == "MUTE" ]] && {
