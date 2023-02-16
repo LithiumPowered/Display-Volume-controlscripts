@@ -42,4 +42,4 @@ printf "$CurrBright" > ~/.cache/screen_brightness
 
 # Display current brightness
 # printf "Monitor $MON "
-dunstify -r 192519  --icon=~/.config/i3/scripts/img_b.jpg "$MON Display Brightness" "$( xrandr --verbose --current | grep ^"$MON" -A5 | tail -n1 | xargs)"
+dunstify -r 192519  --icon=img_b.jpg "$MON Display Brightness" "$( xrandr --verbose --current | grep ^"$MON" -A5 | tail -n1 | xargs)"
