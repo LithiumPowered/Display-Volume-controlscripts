@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Get ipinfo
+RES=$(curl -s 'https://ipinfo.io/json')
+
+# jq pertinent info
+PUB_IP="$(echo $RES | jq -r '.ip' | xargs -0)"
+LOC_COUNTRY="$(echo $RES | jq -r '.country' | xargs -0)"
+LOC_CITY="$(echo $RES | jq -r '.city' | xargs -0)"
+
+# output to console
+printf "$PUB_IP $LOC_COUNTRY, $LOC_CITY\n"
